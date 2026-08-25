@@ -1,0 +1,35 @@
+<!--pages/backend/login.wxml-->
+<view class="container">
+  <view class="login-box">
+    <view class="title">登录</view>
+    <view>管理人员账号可登录</view>
+    <!-- 账号输入 -->
+    <view class="input-group">
+      <text class="label">账号</text>
+      <input 
+        class="input" 
+        placeholder="请输入账号"
+        bindinput="onAccountInput"
+        value="{{account}}"
+      />
+    </view>
+    
+    <!-- 密码输入 -->
+    <view class="input-group">
+      <text class="label">密码</text>
+      <input 
+        class="input" 
+        type="password" 
+        placeholder="请输入密码"
+        bindinput="onPasswordInput"
+        value="{{password}}"
+      />
+    </view>
+    
+    <!-- 登录按钮 -->
+    <button class="login-btn" bindtap="handleLogin">登录</button>
+    
+    <!-- 错误提示 -->
+    <view class="error-msg" wx:if="{{errorMsg}}">{{errorMsg}}</view>
+  </view>
+</view>

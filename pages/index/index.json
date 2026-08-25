@@ -1,5 +1,8 @@
 {
-  "usingComponents": {
-      
-  }
+    "usingComponents": {
+      "component_calendar":"/pages/component_calendar/component_calendar"
+    },
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "人博日历",
+  "navigationBarBackgroundColor": "#ffffff"
 }

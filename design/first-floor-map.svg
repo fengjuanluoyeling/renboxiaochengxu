@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 820" role="img" aria-labelledby="title desc">
+  <title id="title">浙江大学医学人体博物馆一楼示意图</title>
+  <desc id="desc">简洁版一楼地图，包含大门、塑化标本、矢状切面标本、断层切面标本和通往二楼的楼梯。</desc>
+  <defs>
+    <style>
+      .bg { fill: #f7f9fb; }
+      .paper { fill: #ffffff; }
+      .wall { fill: none; stroke: #163b5c; stroke-width: 12; stroke-linecap: round; stroke-linejoin: round; }
+      .partition { fill: none; stroke: #c9d4df; stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; }
+      .exhibit { fill: #f8fafc; stroke: #516d86; stroke-width: 4; }
+      .label { fill: #163b5c; font-family: "Microsoft YaHei", "PingFang SC", sans-serif; font-size: 26px; font-weight: 700; text-anchor: middle; }
+      .sub { fill: #63788d; font-family: "Microsoft YaHei", "PingFang SC", sans-serif; font-size: 17px; text-anchor: middle; }
+      .device-label { fill: #163b5c; font-family: "Microsoft YaHei", "PingFang SC", sans-serif; font-size: 15px; font-weight: 700; text-anchor: middle; }
+      .title { fill: #102a43; font-family: "Microsoft YaHei", "PingFang SC", sans-serif; font-size: 34px; font-weight: 700; }
+      .subtitle { fill: #63788d; font-family: "Microsoft YaHei", "PingFang SC", sans-serif; font-size: 18px; }
+      .door { stroke: #163b5c; stroke-width: 6; stroke-linecap: round; }
+      .stair { fill: none; stroke: #63788d; stroke-width: 4; stroke-linecap: round; }
+      .north { fill: #63788d; font-family: "Microsoft YaHei", "PingFang SC", sans-serif; font-size: 16px; text-anchor: middle; }
+      .compass-circle { fill: #ffffff; stroke: #c9d4df; stroke-width: 2; }
+      .compass-arrow { fill: #163b5c; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1200" height="820"/>
+  <rect class="paper" x="64" y="48" width="1072" height="724" rx="18"/>
+
+  <text class="title" x="92" y="106">浙江大学医学人体博物馆一楼示意图</text>
+  <text class="subtitle" x="94" y="138">示意图仅参考 · 非精确比例</text>
+
+  <g transform="translate(1040 112)">
+    <circle class="compass-circle" cx="0" cy="0" r="32"/>
+    <path class="compass-arrow" d="M0 20 L11 -9 L0 -2 L-11 -9 Z"/>
+    <text class="north" x="0" y="52">北</text>
+  </g>
+
+  <g transform="translate(0, 18)">
+    <!-- Exterior wall, with entrance gap on the left. -->
+    <path class="wall" d="M180 164 H1024 Q1064 164 1064 204 V628 Q1064 668 1024 668 H180"/>
+    <path class="wall" d="M180 164 V334"/>
+    <path class="wall" d="M180 486 V668"/>
+
+    <!-- Entrance. -->
+    <line class="door" x1="142" y1="362" x2="142" y2="458"/>
+    <text class="label" x="102" y="396">大门</text>
+    <text class="sub" x="102" y="424">入口</text>
+
+    <!-- Exhibit blocks. -->
+    <rect class="exhibit" x="234" y="206" width="240" height="104" rx="52"/>
+    <text class="label" x="354" y="252">塑化标本</text>
+    <text class="sub" x="354" y="280">入口左侧</text>
+
+    <rect class="exhibit" x="234" y="522" width="240" height="104" rx="52"/>
+    <text class="label" x="354" y="568">塑化标本</text>
+    <text class="sub" x="354" y="596">入口右侧</text>
+
+    <rect class="exhibit" x="570" y="218" width="250" height="50" rx="14"/>
+    <text class="label" x="695" y="251">矢状切面标本</text>
+
+    <rect class="exhibit" x="654" y="287" width="82" height="246" rx="16"/>
+    <text class="label" x="695" y="382">断层</text>
+    <text class="label" x="695" y="414">切面</text>
+    <text class="label" x="695" y="446">标本</text>
+
+    <rect class="exhibit" x="758" y="344" width="66" height="146" rx="12"/>
+    <text class="device-label" x="791" y="400">虚拟</text>
+    <text class="device-label" x="791" y="422">解剖平台</text>
+
+    <rect class="exhibit" x="846" y="300" width="28" height="230" rx="8"/>
+    <text class="device-label" x="860" y="408">LED</text>
+    <text class="device-label" x="860" y="430">屏</text>
+
+    <rect class="exhibit" x="252" y="334" width="112" height="58" rx="14"/>
+    <text class="label" x="308" y="372">值班台</text>
+
+    <rect class="exhibit" x="936" y="498" width="60" height="120" rx="16"/>
+    <text class="label" x="966" y="548">楼梯</text>
+    <text class="sub" x="966" y="576">至二楼</text>
+    <line class="stair" x1="950" y1="594" x2="982" y2="594"/>
+    <line class="stair" x1="950" y1="608" x2="982" y2="608"/>
+    <line class="stair" x1="950" y1="622" x2="982" y2="622"/>
+  </g>
+</svg>

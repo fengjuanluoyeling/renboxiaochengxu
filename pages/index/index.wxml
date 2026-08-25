@@ -1,27 +1,82 @@
 <!--index.wxml-->
-<scroll-view class="scrollarea" scroll-y type="list">
-  <view class="container">
-    <view class="userinfo">
-      <block wx:if="{{canIUseNicknameComp && !hasUserInfo}}">
-        <button class="avatar-wrapper" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
-          <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
-        </button>
-        <view class="nickname-wrapper">
-          <text class="nickname-label">昵称</text>
-          <input type="nickname" class="nickname-input" placeholder="请输入昵称" bind:change="onInputChange" />
-        </view>
-      </block>
-      <block wx:elif="{{!hasUserInfo}}">
-        <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
-        <view wx:else> 请使用2.10.4及以上版本基础库 </view>
-      </block>
-      <block wx:else>
-        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-      </block>
+<view class="page">
+  <image src="/images/background.jpg" mode="aspectFill" class="backgroundPicture"/>
+  <view class="backgroundMask"></view>
+
+  <view class="content">
+    <view class="noticeBar">
+      <text class="noticeTag">公告</text>
+      <text class="noticeText">{{announcementText}}</text>
     </view>
-    <view class="usermotto">
-      <text class="user-motto">{{motto}}</text>
+
+    <view class="navigationCard" bindtap="visitNavigation" hover-class="navigationCardHover">
+      <view class="navigationMain">
+        <text class="navigationEyebrow">到馆服务</text>
+        <text class="navigationTitle">入馆导航</text>
+        <text class="navigationDesc">查看入校预约提醒、医学院路线与人博馆入口指引</text>
+      </view>
+      <view class="navigationAction">
+        <text>进入</text>
+      </view>
+    </view>
+
+    <view class="calendarPanel">
+      <view class="calendarHeader">
+        <view bindtap="lastmonth" class="navButton" hover-class="navButtonHover">‹</view>
+        <view class="monthInfo">
+          <text class="title">{{year}}年{{month}}月</text>
+          <text class="subtitle">浙江大学医学人体博物馆</text>
+        </view>
+        <view bindtap="nextmonth" class="navButton" hover-class="navButtonHover">›</view>
+      </view>
+
+      <view class="statusSummary">
+        <view class="summaryItem summaryOpen">
+          <text class="summaryNumber">{{statusSummary.open}}</text>
+          <text class="summaryLabel">开馆日</text>
+        </view>
+        <view class="summaryItem summaryClosed">
+          <text class="summaryNumber">{{statusSummary.closed}}</text>
+          <text class="summaryLabel">闭馆日</text>
+        </view>
+        <view class="summaryItem summaryUnknown">
+          <text class="summaryNumber">{{statusSummary.unknown}}</text>
+          <text class="summaryLabel">待定日</text>
+        </view>
+      </view>
+
+      <view class="legend">
+        <view class="legendItem">
+          <text class="legendDot dotOpen"></text>
+          <text>开放</text>
+        </view>
+        <view class="legendItem">
+          <text class="legendDot dotClosed"></text>
+          <text>闭馆</text>
+        </view>
+        <view class="legendItem">
+          <text class="legendDot dotUnknown"></text>
+          <text>待定</text>
+        </view>
+      </view>
+
+      <view class="weekendtab">
+        <text>周日</text>
+        <text>周一</text>
+        <text>周二</text>
+        <text>周三</text>
+        <text>周四</text>
+        <text>周五</text>
+        <text>周六</text>
+      </view>
+
+      <view class="canlender">
+        <view wx:for="{{days}}" wx:key="index" class="canlenderblock">
+          <component_calendar openState="{{openStateThisMonth[index]}}" isToday="{{todayIndex === index}}">
+            {{days[index]}}
+          </component_calendar>
+        </view>
+      </view>
     </view>
   </view>
-</scroll-view>
+</view>

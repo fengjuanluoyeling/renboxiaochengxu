@@ -1,0 +1,7 @@
+{
+  "usingComponents": {},
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "团体参观预约",
+    "navigationBarBackgroundColor": "#ffffff",
+    "enablePullDownRefresh": true
+}

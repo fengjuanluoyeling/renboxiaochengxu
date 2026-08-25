@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 820" role="img" aria-labelledby="title desc">
+  <title id="title">浙江大学医学人体博物馆二楼示意图</title>
+  <desc id="desc">根据二楼手绘草图整理的简洁示意图。下方为北，左侧为生理区，右侧为病理区，楼梯居中偏右，楼梯下方为通往胚胎馆的封闭通道。</desc>
+  <defs>
+    <style>
+      .bg { fill: #f7f9fb; }
+      .paper { fill: #ffffff; }
+      .wall { fill: none; stroke: #163b5c; stroke-width: 12; stroke-linecap: round; stroke-linejoin: round; }
+      .partition { fill: none; stroke: #c9d4df; stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; }
+      .zone-box { fill: none; stroke: #c9d4df; stroke-width: 4; stroke-dasharray: 12 10; stroke-linecap: round; opacity: 0.75; }
+      .exhibit { fill: #f8fafc; stroke: #516d86; stroke-width: 4; }
+      .label { fill: #163b5c; font-family: "Microsoft YaHei", "PingFang SC", sans-serif; font-size: 26px; font-weight: 700; text-anchor: middle; }
+      .zone-label { fill: #8aa0b3; font-family: "Microsoft YaHei", "PingFang SC", sans-serif; font-size: 28px; font-weight: 700; text-anchor: middle; }
+      .small-label { fill: #163b5c; font-family: "Microsoft YaHei", "PingFang SC", sans-serif; font-size: 20px; font-weight: 700; text-anchor: middle; }
+      .mini-label { fill: #163b5c; font-family: "Microsoft YaHei", "PingFang SC", sans-serif; font-size: 18px; font-weight: 700; text-anchor: middle; dominant-baseline: middle; }
+      .sub { fill: #63788d; font-family: "Microsoft YaHei", "PingFang SC", sans-serif; font-size: 17px; text-anchor: middle; }
+      .title { fill: #102a43; font-family: "Microsoft YaHei", "PingFang SC", sans-serif; font-size: 34px; font-weight: 700; }
+      .subtitle { fill: #63788d; font-family: "Microsoft YaHei", "PingFang SC", sans-serif; font-size: 18px; }
+      .stair { fill: none; stroke: #63788d; stroke-width: 4; stroke-linecap: round; }
+      .blocked { fill: #63788d; font-family: "Microsoft YaHei", "PingFang SC", sans-serif; font-size: 19px; font-weight: 700; text-anchor: middle; }
+      .north { fill: #63788d; font-family: "Microsoft YaHei", "PingFang SC", sans-serif; font-size: 16px; text-anchor: middle; }
+      .compass-circle { fill: #ffffff; stroke: #c9d4df; stroke-width: 2; }
+      .compass-arrow { fill: #163b5c; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1200" height="820"/>
+  <rect class="paper" x="64" y="48" width="1072" height="724" rx="18"/>
+
+  <text class="title" x="92" y="106">浙江大学医学人体博物馆二楼示意图</text>
+  <text class="subtitle" x="94" y="138">示意图仅参考 · 非精确比例</text>
+
+  <g transform="translate(1040 112)">
+    <circle class="compass-circle" cx="0" cy="0" r="32"/>
+    <path class="compass-arrow" d="M0 20 L11 -9 L0 -2 L-11 -9 Z"/>
+    <text class="north" x="0" y="52">北</text>
+  </g>
+
+  <g transform="translate(0, 18)">
+    <!-- Main hall. Bottom is north, with a center passage toward the embryo hall. -->
+    <path class="wall" d="M150 170 H1040"/>
+    <path class="wall" d="M150 170 V650"/>
+    <path class="wall" d="M1040 170 V650"/>
+    <path class="wall" d="M150 650 H620"/>
+    <path class="wall" d="M812 650 H1040"/>
+
+    <rect class="zone-box" x="166" y="186" width="424" height="462" rx="18"/>
+    <rect class="zone-box" x="780" y="244" width="254" height="366" rx="18"/>
+
+    <text class="zone-label" x="508" y="286">生理区</text>
+    <text class="zone-label" x="904" y="250">病理区</text>
+
+    <!-- Stair block, center-right. -->
+    <rect class="exhibit" x="650" y="300" width="126" height="300" rx="14"/>
+    <text class="label" x="713" y="436">楼梯</text>
+    <line class="stair" x1="680" y1="466" x2="746" y2="466"/>
+    <line class="stair" x1="680" y1="484" x2="746" y2="484"/>
+    <line class="stair" x1="680" y1="502" x2="746" y2="502"/>
+    <line class="stair" x1="680" y1="520" x2="746" y2="520"/>
+
+    <!-- Closed passage to the embryo hall, directly north of the stair. -->
+    <path class="partition" d="M620 650 L574 742"/>
+    <path class="partition" d="M812 650 L858 742"/>
+    <line class="partition" x1="636" y1="674" x2="610" y2="726"/>
+    <line class="partition" x1="680" y1="674" x2="654" y2="726"/>
+    <line class="partition" x1="724" y1="674" x2="698" y2="726"/>
+    <line class="partition" x1="768" y1="674" x2="742" y2="726"/>
+    <text class="blocked" x="716" y="720">胚胎馆（修缮中）</text>
+    <text class="sub" x="716" y="746">此路不通</text>
+
+    <!-- Physiology area: upper-left key specimens. -->
+    <rect class="exhibit" x="202" y="190" width="68" height="68" rx="10"/>
+    <text class="mini-label" x="236" y="210">人体</text>
+    <text class="mini-label" x="236" y="230">骨架</text>
+    <text class="mini-label" x="236" y="250">标本</text>
+
+    <rect class="exhibit" x="286" y="190" width="68" height="68" rx="10"/>
+    <text class="mini-label" x="320" y="210">消化</text>
+    <text class="mini-label" x="320" y="230">系统</text>
+    <text class="mini-label" x="320" y="250">标本</text>
+
+    <rect class="exhibit" x="370" y="198" width="198" height="48" rx="10"/>
+    <text class="small-label" x="469" y="230">淋巴系统标本</text>
+
+    <!-- Physiology area: cases between blood cast and upper-left specimens. -->
+    <rect class="exhibit" x="224" y="378" width="300" height="40" rx="20"/>
+    <text class="small-label" x="374" y="405">展柜</text>
+
+    <rect class="exhibit" x="224" y="438" width="300" height="40" rx="20"/>
+    <text class="small-label" x="374" y="465">展柜</text>
+
+    <rect class="exhibit" x="224" y="498" width="300" height="40" rx="20"/>
+    <text class="small-label" x="374" y="525">展柜</text>
+
+    <!-- Physiology area: lower-left blood cast case. -->
+    <rect class="exhibit" x="164" y="520" width="50" height="104" rx="10"/>
+    <text class="mini-label" x="189" y="552">血管</text>
+    <text class="mini-label" x="189" y="578">铸型</text>
+    <text class="mini-label" x="189" y="604">标本</text>
+
+    <!-- South of the eight plastinated specimens, additional east-west cases. -->
+    <rect class="exhibit" x="260" y="548" width="292" height="34" rx="17"/>
+    <text class="mini-label" x="406" y="566">展柜</text>
+
+    <!-- Eight plastinated specimens along the north edge, numbered right-to-left. -->
+    <text class="sub" x="384" y="596">塑化标本</text>
+    <rect class="exhibit" x="224" y="610" width="34" height="34" rx="6"/>
+    <text class="mini-label" x="241" y="627">8号</text>
+    <rect class="exhibit" x="266" y="610" width="34" height="34" rx="6"/>
+    <text class="mini-label" x="283" y="627">7号</text>
+    <rect class="exhibit" x="308" y="610" width="34" height="34" rx="6"/>
+    <text class="mini-label" x="325" y="627">6号</text>
+    <rect class="exhibit" x="350" y="610" width="34" height="34" rx="6"/>
+    <text class="mini-label" x="367" y="627">5号</text>
+    <rect class="exhibit" x="392" y="610" width="34" height="34" rx="6"/>
+    <text class="mini-label" x="409" y="627">4号</text>
+    <rect class="exhibit" x="434" y="610" width="34" height="34" rx="6"/>
+    <text class="mini-label" x="451" y="627">3号</text>
+    <rect class="exhibit" x="476" y="610" width="34" height="34" rx="6"/>
+    <text class="mini-label" x="493" y="627">2号</text>
+    <rect class="exhibit" x="518" y="610" width="34" height="34" rx="6"/>
+    <text class="mini-label" x="535" y="627">1号</text>
+
+    <!-- Pathology area: east-west display cases. -->
+    <rect class="exhibit" x="808" y="276" width="214" height="40" rx="20"/>
+    <text class="small-label" x="915" y="303">展柜</text>
+
+    <rect class="exhibit" x="790" y="356" width="244" height="40" rx="20"/>
+    <text class="small-label" x="912" y="383">展柜</text>
+
+    <rect class="exhibit" x="824" y="446" width="204" height="40" rx="20"/>
+    <text class="small-label" x="926" y="473">展柜</text>
+
+    <rect class="exhibit" x="842" y="532" width="168" height="40" rx="20"/>
+    <text class="small-label" x="926" y="559">展柜</text>
+  </g>
+</svg>

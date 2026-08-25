@@ -1,0 +1,91 @@
+<!--pages/teamReservationtable/teamReservationtable.wxml-->
+<view class="page">
+  <view class="hero">
+    <text class="heroTitle">团队参观预约</text>
+    <text class="heroText">适用于10人及以上团队。请提前完成登记，并在工作日电话联系确认。</text>
+  </view>
+
+  <view class="section">
+    <view class="sectionHeader">
+      <text class="sectionTitle">预约说明</text>
+      <text class="sectionTag">团队入口</text>
+    </view>
+    <view class="noticeList">
+      <view class="noticeItem">
+        <text class="noticeIndex">1</text>
+        <text class="noticeText">本页面仅用于团队入馆预约；个人参观请在人博日历中点击开放日期后登记，或现场扫码登记。</text>
+      </view>
+      <view class="noticeItem">
+        <text class="noticeIndex">2</text>
+        <text class="noticeText">团队规模应不少于10人；少于10人时请使用个人预约或现场扫码登记。</text>
+      </view>
+      <view class="noticeItem">
+        <text class="noticeIndex">3</text>
+        <text class="noticeText">建议每批20-30人入馆，人数较多时请分批、有序参观。</text>
+      </view>
+      <view class="noticeItem">
+        <text class="noticeIndex">4</text>
+        <text class="noticeText">团队入校请自行提前与学校相关部门确认，并预留校内通行时间。</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="timeSection">
+    <view class="sectionHeader">
+      <text class="sectionTitle">开放时间</text>
+      <text class="sectionTag">请按时到馆</text>
+    </view>
+    <view class="timeGrid">
+      <view class="timeItem">
+        <text class="timeLabel">上午</text>
+        <text class="timeValue">8:30-11:30</text>
+      </view>
+      <view class="timeItem">
+        <text class="timeLabel">下午</text>
+        <text class="timeValue">13:30-16:30</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="section">
+    <view class="sectionHeader">
+      <text class="sectionTitle">参观要求</text>
+      <text class="sectionTag">馆内须知</text>
+    </view>
+    <view class="ruleList">
+      <text class="ruleText">团体入馆参观需先登记，请提前三日预约登记，并在工作日电话联系确认。</text>
+      <text class="ruleText">入馆参观时请提交纸质版申请表格，具体要求可咨询公众号或工作人员。</text>
+      <text class="ruleText">请听从讲解教师和工作人员安排，遵守馆内各项规定。</text>
+      <text class="ruleText">本馆收藏标本为医学人体标本，参观前请适当调整心态。</text>
+      <text class="ruleText">未成年人请在家长陪同下参观，建议14周岁以上。</text>
+      <text class="ruleText">馆内禁止吸烟、饮食、喧哗、触摸或移动标本；未经许可严禁拍照和摄影。</text>
+    </view>
+  </view>
+
+  <view class="contactSection">
+    <view class="sectionHeader">
+      <text class="sectionTitle">电话确认</text>
+      <text class="sectionTag">工作日</text>
+    </view>
+    <view class="phoneGrid">
+      <text class="phoneNumber">0571-88208318</text>
+      <text class="phoneNumber">0571-88208321</text>
+    </view>
+  </view>
+
+  <view class="qrSection">
+    <view class="qrHeader">
+      <text class="sectionTitle">团队登记二维码</text>
+      <text class="qrHint">长按识别或保存</text>
+    </view>
+    <view class="qrCard">
+      <image
+        src="/images/浙江大学医学人体博物馆团体入馆登记表.png"
+        mode="widthFix"
+        class="qrImage"
+        show-menu-by-longpress="{{true}}"
+      />
+    </view>
+    <text class="footerTip">请完成线上登记后，按要求准备团队参观材料并电话确认。</text>
+  </view>
+</view>

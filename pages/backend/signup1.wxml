@@ -1,0 +1,56 @@
+<!--pages/backend/signup1.wxml-->
+<view class="container">
+  <view class="title">讲解员/值班员报名</view>
+  
+  <view class="form-item">
+    <text>您报名的是：</text>
+    <radio-group model:value="{{career}}">
+      <label><radio value="讲解员"/>讲解员</label>
+      <label><radio value="值班员"/>值班员</label>
+    </radio-group>
+  </view>
+
+  <view class="form-item">
+    <text>您的姓名：</text>
+    <input model:value="{{name}}" placeholder="请输入姓名"/>
+  </view>
+  
+  <view class="form-item">
+    <text>您的电话联系方式：</text>
+    <input type="number" model:value="{{phone}}" placeholder="请输入电话"/>
+  </view>
+
+<!-- 这个特殊的多选框不能用model:value，必须用bindchange -->
+  <view class="form-item">
+    <text>请问何时有空来人博馆服务（多选）：</text>
+    <checkbox-group  bindchange="onWorktimeChange">
+      <label wx:for="{{timeList}}">
+        <checkbox value="{{item}}" />
+        {{item}}
+      </label>
+    </checkbox-group>
+  </view>
+
+  <view class="form-item">
+    <text>如果报名了两个以上时间段，并且两个时间段均有余量，请问是否愿意参加两个时段的志愿服务？</text>
+    <radio-group model:value="{{workTwice}}">
+      <label><radio value="是"/>是</label>
+      <label><radio value="否"/>否</label>
+    </radio-group>
+  </view>
+
+  <view class="form-item">
+    <text>请问您是否有空拿取人博馆钥匙？</text>
+    <radio-group model:value="{{key}}">
+      <label><radio value="是"/>是</label>
+      <label><radio value="否"/>否</label>
+    </radio-group>
+  </view>
+  
+  <view class="form-item">
+    <text>备注：</text>
+    <input type="text" model:value="{{note}}" placeholder="备注"/>
+  </view>
+  
+  <button type="primary" bindtap="submitForm" class="button">提交</button>
+</view>

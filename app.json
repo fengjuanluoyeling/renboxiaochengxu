@@ -2,32 +2,48 @@
   "entryPagePath": "pages/index/index",
   "pages": [
     "pages/index/index",
-    "pages/flower/flower",
-    "pages/map/map"
+    "pages/visitNavigation/visitNavigation",
+    "pages/reservationtable/reservationtable",
+    "pages/teamReservationtable/teamReservationtable",
+    "pages/component_calendar/component_calendar",
+    "pages/backend/backend",
+    "pages/backend/signup1",
+    "pages/backend/login",
+    "pages/backend/management",
+    "pages/backend/openstate",
+    "pages/caption/caption",
+    "pages/caption_firstFloor/caption_firstFloor",
+    "pages/caption_secondFloor/caption_secondFloor"
   ],
   "window": {
-    "navigationBarTextStyle": "white",
+    "navigationBarTextStyle": "black",
     "navigationBarTitleText": "日历",
     "navigationBarBackgroundColor": "#ffffff",
-    "enablePullDownRefresh":true,
-    "intialRenderingCache": "static"
+    "enablePullDownRefresh": true
   },
   "tabBar": {
-      "color": "#000000",
-      "selectedColor": "#ff0000",
-      "backgroundColor": "#ffefd5",
-      "borderstyle":"white",
-      "list": [{
-          "pagePath": "pages/index/index",
-          "text": "人博日历"
-      },{
-          "pagePath": "pages/flower/flower",
-          "text": "献花"
-      },{
-          "pagePath": "pages/map/map",
-          "text": "地图"
+    "color": "#000000",
+    "selectedColor": "#ff0000",
+    "backgroundColor": "#ffefd5",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "人博日历"
+      },
+      {
+        "pagePath": "pages/teamReservationtable/teamReservationtable",
+        "text": "团队参观预约"
+      },
+      {
+        "pagePath": "pages/caption/caption",
+        "text": "线上讲解"
+      },
+      {
+        "pagePath": "pages/backend/backend",
+        "text": "后台"
       }
-      ]
+    ]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json",

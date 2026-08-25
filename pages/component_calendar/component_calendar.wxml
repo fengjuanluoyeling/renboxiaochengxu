@@ -1,0 +1,20 @@
+<!--pages/component_calendar/component_calendar.wxml-->
+<!-- 一个组件，根据传入的状态不同，显示不同的颜色和点击事件 -->
+<view class="container">
+  <view wx:if="{{openState === 'open'}}" class="dateCard open {{isToday ? 'today' : ''}}" bindtap="open">
+    <view class="dateNumber"><slot></slot></view>
+    <view class="dateStatus">开馆</view>
+  </view>
+
+  <view wx:elif="{{openState === 'closed'}}" class="dateCard closed {{isToday ? 'today' : ''}}" bindtap="closed">
+    <view class="dateNumber"><slot></slot></view>
+    <view class="dateStatus">闭馆</view>
+  </view>
+
+  <view wx:elif="{{openState === 'Unknown'}}" class="dateCard unknown {{isToday ? 'today' : ''}}" bindtap="unknown">
+    <view class="dateNumber"><slot></slot></view>
+    <view class="dateStatus">待定</view>
+  </view>
+
+  <view wx:else class="dateCard blank"></view>
+</view>

@@ -1,0 +1,3 @@
+<!--pages/backend/backend.wxml-->
+<view bind:tap="NavigateToSignUp1">讲解员报名</view>
+<view bind:tap="NavigateToManagement">编辑</view>

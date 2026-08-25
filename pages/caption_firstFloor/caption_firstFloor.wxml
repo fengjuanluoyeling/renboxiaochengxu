@@ -1,0 +1,146 @@
+<!--pages/caption_firstFloor/caption_firstFloor.wxml-->
+
+<view class="page-container">
+  <scroll-view class="page-scroll" scroll-y="true" enhanced="true" show-scrollbar="false">
+    <view class="map-card">
+        <image class="floor-map" src="/design/first-floor-map.png" mode="widthFix"></image>
+    </view>
+
+    <view class="guide-panel">
+        <view class="guide-heading">
+            <text class="guide-title">一楼讲解</text>
+            <text class="guide-subtitle">对照地图，选择需要查看的讲解点</text>
+        </view>
+        <view class="Grid_layout">
+        <!--按钮1-->
+        <view class="fold-item class1">
+            <!--点击区域-->
+            <view class="container" bindtap="showScrollModal1">          
+                <text class="guide-item-title">塑化标本</text>
+                <text class="guide-item-desc">硅橡胶塑化技术与标本保存</text>
+            </view>
+  
+            <!-- 弹窗遮罩层 -->
+            <view class="modal-mask" wx:if="{{showModal1}}" bindtap="hideModal1"></view>
+  
+            <!-- 弹窗内容 -->
+            <view class="modal-content" wx:if="{{showModal1}}">
+                <view class="modal-header">
+                <text class="modal-title">塑化标本</text>
+                <text class="modal-close" bindtap="hideModal1">✕</text>
+                </view>
+                <!-- 可滚动区域 -->
+                <scroll-view class="modal-body" scroll-y="true"  enhanced="true" show-scrollbar="true">
+                <view>
+                <text class="textContent">
+                    大厅进门左右两侧展示的四具标本为“塑化标本”，它们采用了目前较先进的硅橡胶塑化技术，颜色是后期染上的——灰白色是肌腱，红色是肌腹。这种技术由德国学者Gunther von Hagens于20世纪70年代末发明，主要利用硅橡胶塑化剂对标本进行渗透，取代组织中的水分和脂类而达到长期保存标本的目的。这项技术能取代传统的福尔马林保存法，避免了甲醛气体对人体的危害，而且标本无气味、可长期存放，还能清晰展示病变结构。不过它也有一些小缺点，比如制作成本高、夏季易发霉、缩水率较大。{{"\n"}}    
+                    塑化标本的制作过程很复杂，大致分为六步走：首先通过动脉灌注福尔马林防腐固定，再根据展示需求解剖，之后用丙酮在低温下脱水脱脂，再用过氧化氢漂白，其中关键步骤是真空浸胶或压力灌注塑化剂，最后经气体硬化定型。简单来说就是用高分子聚合物替换细胞内的水分和脂肪，让标本长期保存。{{"\n"}}
+                </text>
+                </view>
+                </scroll-view>
+            </view>
+    </view>
+
+    <!--按钮3-->
+    <view class="fold-item class3">
+        <!--点击区域-->
+        <view class="container" bindtap="showScrollModal3">          
+                <text class="guide-item-title">矢状切面标本</text>
+                <text class="guide-item-desc">观察内脏左右差异与肺部变化</text>
+            </view>
+  
+            <!-- 弹窗遮罩层 -->
+            <view class="modal-mask" wx:if="{{showModal3}}" bindtap="hideModal3"></view>
+  
+            <!-- 弹窗内容 -->
+            <view class="modal-content" wx:if="{{showModal3}}">
+                <view class="modal-header">
+                <text class="modal-title">矢状切面标本</text>
+                <text class="modal-close" bindtap="hideModal3">✕</text>
+                </view>
+                <!-- 可滚动区域 -->
+                <scroll-view class="modal-body" scroll-y="true"  enhanced="true" show-scrollbar="true">
+                <view>
+                <text class="textContent">
+                    最后让我们来观察进门左手边的矢状切面标本，它能很好地展示内脏的左右差异。例如心脏约2/3在正中线左侧，而肝脏右叶大、左叶小，因此肝左右形态差异也可帮助我们判断该标本切片的左右对应关系。同样，我们的肺也是不对称的，肺部的分叶是“左二右三”，即左肺通过斜裂分为上叶与下叶，右肺通过斜裂与水平裂分为上、中、下三叶。同时大家能注意到标本的肺呈灰黑色，这是因为吸入的粉尘被肺巨噬细胞吞噬，且炭末颗粒无法被巨噬细胞消化分解，所以这些颗粒会一直沉积在肺中，使得肺呈黑色。灰黑色的肺在中老年人、城市居民、吸烟人群以及一些有职业暴露的人群中更常见，不过虽然这是“常见”现象，却不代表这是正常现象，大量炭末颗粒沉积会影响肺功能。{{"\n"}}
+                    说到吸烟，危害极大，烟草烟雾含有69已知的种致癌物，可引发机体内关键基因突变，可能会导致肺癌、冠心病等多种疾病；同时我们也不能对电子烟抱有侥幸心理，电子烟也并不安全，其气溶胶中的成分如丙二醇、香料成分具有细胞毒性，还可能增加慢性阻塞性肺病风险，而且若电子烟与传统香烟混用患病概率更高，因此大家一定要警惕吸烟的危害，远离烟草，守护肺部健康！{{"\n"}}
+                </text>
+                </view>
+                </scroll-view>
+            </view>
+    </view>
+
+    <!--按钮4-->
+    <view class="fold-item class4">
+        <!--点击区域-->
+        <view class="container" bindtap="showScrollModal4">          
+                <text class="guide-item-title">断层切面标本</text>
+                <text class="guide-item-desc">解剖方位、切面与关节结构</text>
+            </view>
+  
+            <!-- 弹窗遮罩层 -->
+            <view class="modal-mask" wx:if="{{showModal4}}" bindtap="hideModal4"></view>
+  
+            <!-- 弹窗内容 -->
+            <view class="modal-content" wx:if="{{showModal4}}">
+                <view class="modal-header">
+                <text class="modal-title">断层切面标本</text>
+                <text class="modal-close" bindtap="hideModal4">✕</text>
+                </view>
+                <!-- 可滚动区域 -->
+                <scroll-view class="modal-body" scroll-y="true"  enhanced="true" show-scrollbar="true">
+                <view>
+                <text class="textContent">
+                    先给大家普及几个解剖学小知识：标准解剖学姿势是指“身体直立，面向前方，两眼平视正前方，两足并拢，足尖向前，双上肢下垂于躯干的两侧，掌心向前”的身体姿态。以此为基准，规定了上下、前后等方位术语，还由此规定了“三轴”和“三面”。“三轴”指垂直轴、矢状轴、冠状轴三个轴，“三面”指矢状面、冠状面、水平面三个面。{{"\n"}}
+                    正对大门的这具标本的躯干和头部用水平面切开，关节处用矢状面，这样不仅能更清晰看到器官的形态和位置，还能为CT扫描提供参考。当然，随着科技的进步，当下也有利用人体的水平、冠状等切面所构建的数据集，可以帮助形成虚拟仿真人体模型用于医学教育和临床实践。大家可以看到，在这具断层标本后方的两台电脑中就下载了虚拟仿真人体模型，可供大家使用体验。{{"\n"}}
+                    在日常生活中，我们经常提到“关节”一词，但可能对于它真实的解剖结构还是有所陌生的。我们都知道“关节”是一个可以活动的结构，它的实质是骨与骨的间接连结，由关节面、关节囊、关节腔组成，其中关节面上的软骨能减少摩擦、缓冲冲击，部分关节还分化出辅助结构如韧带、关节盘等，其中我们耳熟能详的半月板就是膝关节的“关节盘”。关节盘可调整关节面，以减少外力对关节的冲击和震荡，由于半月板随膝关节运动而移动，因此在膝关节强力骤然运动时易造成半月板的损伤或撕裂。值得注意的是，膝关节主要能进行屈伸运动，半屈位时可轻微旋转，但没有环转功能，所以儿时体育课上“膝绕环”的热身方式并不合理，而正确的做法是反复屈膝活动。{{"\n"}}
+                </text>
+                </view>
+                </scroll-view>
+            </view>
+    </view>
+
+    <!--按钮5-->
+    <view class="fold-item class5">
+        <!--点击区域-->
+        <view class="container" bindtap="showScrollModal5">          
+                <text class="guide-item-title">注意事项</text>
+                <text class="guide-item-desc">查看进门注意事项</text>
+            </view>
+  
+            <!-- 弹窗遮罩层 -->
+            <view class="modal-mask" wx:if="{{showModal5}}" bindtap="hideModal5"></view>
+  
+            <!-- 弹窗内容 -->
+            <view class="modal-content" wx:if="{{showModal5}}">
+                <view class="modal-header">
+                <text class="modal-title">进门注意事项</text>
+                <text class="modal-close" bindtap="hideModal5">✕</text>
+                </view>
+                <!-- 可滚动区域 -->
+                <scroll-view class="modal-body" scroll-y="true"  enhanced="true" show-scrollbar="true">
+                <view>
+                <text class="textContent">
+                    欢迎各位来到浙江大学医学人体博物馆！在参观开始前，先和大家明确几点参观要求：{{"\n"}}
+                    第一，馆内所有标本均真实且来自遗体捐献者——我们尊称他们为“大体老师”，因此严禁拍照、触摸标本，也禁止饮食和大声喧哗，请大家共同守护这份庄重。{{"\n"}}
+                    第二，考虑到标本的特殊性，建议14周岁以下、75周岁以上的参观者由监护人陪同，同时我们不建议8岁以下儿童参观。{{"\n"}}
+                    首先为大家整体介绍一下本馆：馆内总面积达1500平方米，分为生理区、病理区和胚胎区，其中胚胎区位于白色球形建筑内，目前正在修缮。馆藏标本有2500余件，部分可追溯至上世纪四十年代。同时，本馆不仅用于展览，还承担着日常教学任务，现在大家所在的紫金港校区展馆，是2012年正式建成开放的。{{"\n"}}
+                    刚才提到的“大体老师”，是我们对遗体捐赠者的崇高尊称，除此之外，我们也尊称他们为“无语良师”。本院教学楼B座楼下设有“无语良师”纪念碑，以此缅怀他们的无私奉献。我国遗体捐献遵循“自愿、无偿”原则，自上世纪70年代开始就有志愿者参与，2015年起全面停止使用死囚器官，如今所有捐赠均来自志愿者的自愿奉献。截至2026年1月，全国已有超过730万志愿者登记，目前已经完成6万余例遗体捐献，捐献器官近20万个，也正是因为他们的大爱，为我们后世医学教学和研究奠定了基础！{{"\n"}}
+                </text>
+                </view>
+                </scroll-view>
+            </view>
+    </view>
+
+    <!--楼梯：进入二楼讲解-->
+    <view class="fold-item class6">
+        <view class="container" bindtap="goSecondFloor">
+            <text class="guide-item-title">楼梯</text>
+            <text class="guide-item-desc">进入二楼讲解界面</text>
+        </view>
+    </view>
+
+    </view>
+    </view>
+  </scroll-view>
+</view>

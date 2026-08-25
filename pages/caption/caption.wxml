@@ -1,0 +1,45 @@
+<!--pages/caption/caption.wxml-->
+<view class="page">
+    <scroll-view class="page-scroll" scroll-y="true" enhanced="true" show-scrollbar="false">
+        <view class="header">
+            <text class="museum-name">浙江大学医学人体博物馆</text>
+            <text class="page-title">线上讲解</text>
+        </view>
+
+        <view class="floor-list">
+            <view class="floor-card" hover-class="floor-card-hover" bindtap="caption_firstfloor">
+                <view class="map-preview">
+                    <image class="map-image" src="/design/first-floor-map.png" mode="aspectFit"></image>
+                </view>
+                <view class="floor-content">
+                    <view class="floor-heading">
+                        <text class="floor-name">一楼</text>
+                        <text class="floor-tag">入口展区</text>
+                    </view>
+                    <text class="floor-desc">注意事项、塑化标本、断层切面标本、矢状切面标本</text>
+                    <view class="floor-footer">
+                        <text class="floor-count">4 项讲解内容</text>
+                        <text class="floor-action">进入</text>
+                    </view>
+                </view>
+            </view>
+
+            <view class="floor-card" hover-class="floor-card-hover" bindtap="caption_secondfloor">
+                <view class="map-preview">
+                    <image class="map-image" src="/design/second-floor-map.png" mode="aspectFit"></image>
+                </view>
+                <view class="floor-content">
+                    <view class="floor-heading">
+                        <text class="floor-name">二楼</text>
+                        <text class="floor-tag">专题展区</text>
+                    </view>
+                    <text class="floor-desc">生理区、病理区、骨架标本、消化系统标本与淋巴系统标本</text>
+                    <view class="floor-footer">
+                        <text class="floor-count">11 项讲解内容</text>
+                        <text class="floor-action">进入</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+</view>

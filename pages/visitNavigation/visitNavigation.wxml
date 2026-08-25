@@ -1,0 +1,76 @@
+<!--pages/visitNavigation/visitNavigation.wxml-->
+<view class="page">
+  <scroll-view class="page-scroll" scroll-y="true" enhanced="true" show-scrollbar="false">
+    <view class="header">
+      <text class="museum-name">浙江大学医学人体博物馆</text>
+      <text class="page-title">入馆导航</text>
+      <text class="page-desc">从入校预约到抵达人博馆入口，按步骤完成即可到馆。</text>
+    </view>
+
+    <view class="notice-card">
+      <text class="notice-title">入校提醒</text>
+      <text class="notice-text">校外访客完成参观预约后，仍需通过支付宝“浙大通”预约入校。开放日期以人博日历为准。</text>
+    </view>
+
+    <view class="time-card">
+      <view class="time-header">
+        <text class="section-title">开放时间</text>
+        <text class="section-note">按预约时段到馆</text>
+      </view>
+      <view class="time-row">
+        <view class="time-item">
+          <text class="time-label">上午</text>
+          <text class="time-value">8:30-11:30</text>
+        </view>
+        <view class="time-item">
+          <text class="time-label">下午</text>
+          <text class="time-value">13:30-16:30</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="route-card">
+      <view class="route-heading">
+        <text class="section-title">到馆路线</text>
+        <text class="section-note">建议从南大门进入</text>
+      </view>
+
+      <view class="route-step">
+        <text class="step-number">01</text>
+        <view class="step-content">
+          <text class="step-title">抵达浙江大学医学院</text>
+          <text class="step-text">进入校园后打开导航，搜索“浙江大学医学院”。从南大门进入距离医学院较近。</text>
+          <view class="step-photo">
+            <image class="step-image" src="/images/navigation/campus-medicine.jpg" mode="aspectFill"></image>
+            <text class="step-caption">导航定位：浙江大学医学院</text>
+          </view>
+          <button class="copy-button" plain="true" bindtap="copyNavigationKeyword">复制导航关键词</button>
+        </view>
+      </view>
+
+      <view class="route-step">
+        <text class="step-number">02</text>
+        <view class="step-content">
+          <text class="step-title">通过木楼梯上二楼</text>
+          <text class="step-text">抵达医学院后，按照图中蓝色路线前往木楼梯，并登上二楼平台。</text>
+          <view class="step-photo">
+            <image class="step-image" src="/images/navigation/wooden-stairs.jpg" mode="aspectFill"></image>
+            <text class="step-caption">按蓝色路线前往楼梯</text>
+          </view>
+        </view>
+      </view>
+
+      <view class="route-step route-step-last">
+        <text class="step-number">03</text>
+        <view class="step-content">
+          <text class="step-title">直行抵达人博馆入口</text>
+          <text class="step-text">登上二楼平台后直走，看到人博馆入口标识后即可到达。</text>
+          <view class="step-photo">
+            <image class="step-image" src="/images/navigation/museum-entrance.jpg" mode="aspectFill"></image>
+            <text class="step-caption">二楼平台直行至入口标志点</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

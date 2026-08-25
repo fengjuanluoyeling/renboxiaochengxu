@@ -1,0 +1,59 @@
+<!--pages/backend/openstate.wxml-->
+<!-- pages/index/index.wxml -->
+<view class="container">
+  <view class="header">
+    <text class="title">场馆日期管理</text>
+    <text class="subtitle">8月 → 次年7月 · 每周视图</text>
+  </view>
+
+  <!-- 模式切换按钮 -->
+  <view class="mode-buttons">
+    <button 
+      class="mode-btn {{currentMode === 'open' ? 'active open' : ''}}" 
+      data-mode="open"
+      bindtap="switchMode"
+    >
+      ✅ 开放模式
+    </button>
+    <button 
+      class="mode-btn {{currentMode === 'closed' ? 'active closed' : ''}}" 
+      data-mode="closed"
+      bindtap="switchMode"
+    >
+      🔒 闭馆模式
+    </button>
+    <view class="mode-hint">
+      当前：{{currentMode === 'open' ? '开放模式' : '闭馆模式'}}
+    </view>
+  </view>
+
+  <!-- 日历视图 - 每周一行 -->
+  <scroll-view scroll-y="true" class="calendar-scroll" enhanced="true" show-scrollbar="true">
+    <view class="weeks-container">
+      <block wx:for="{{calendarData}}" wx:key="index">
+        <view class="week-row">
+          <view class="week-label">第{{index+1}}周</view>
+          <view class="week-days">
+            <block wx:for="{{item}}" wx:key="id" wx:for-item="date">
+              <view 
+                class="day-card {{date.status === 'open' ? 'day-open' : 'day-closed'}}"
+                data-month-idx="{{date.monthIdx}}"
+                data-day-idx="{{date.dayIdx}}"
+                bindtap="onDateTap"
+              >
+                <text class="day-month">{{date.monthName}}</text>
+                <text class="day-number">{{date.day}}</text>
+                <text class="day-status">{{date.status === 'open' ? '开放' : '闭馆'}}</text>
+              </view>
+            </block>
+          </view>
+        </view>
+      </block>
+    </view>
+  </scroll-view>
+  
+  <!-- 底部调试按钮 -->
+  <view class="footer">
+    <button class="debug-btn" bindtap="exportData" size="mini" type="default">保存</button>
+  </view>
+</view>

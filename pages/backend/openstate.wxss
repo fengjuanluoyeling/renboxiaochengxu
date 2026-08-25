@@ -1,0 +1,217 @@
+/* pages/backend/openstate.wxss */
+/* pages/index/index.wxss */
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: #f5f7fa;
+    padding: 30rpx 20rpx;
+    box-sizing: border-box;
+  }
+  
+  .header {
+    padding: 20rpx 20rpx 30rpx;
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 48rpx;
+    font-weight: 700;
+    color: #1e3c72;
+    letter-spacing: 1rpx;
+    display: block;
+  }
+  
+  .subtitle {
+    font-size: 24rpx;
+    color: #6b7c93;
+    margin-top: 12rpx;
+    display: block;
+  }
+  
+  /* 模式按钮区域 */
+  .mode-buttons {
+    display: flex;
+    gap: 24rpx;
+    justify-content: center;
+    padding: 20rpx;
+    background: #ffffff;
+    border-radius: 60rpx;
+    margin: 20rpx 20rpx 30rpx;
+    box-shadow: 0 4rpx 12rpx rgba(0,0,0,0.08);
+  }
+  
+  .mode-btn {
+    flex: 1;
+    height: 80rpx;
+    line-height: 80rpx;
+    border-radius: 60rpx;
+    background: #eef2f6;
+    color: #2c3e4e;
+    font-size: 30rpx;
+    font-weight: 600;
+    border: none;
+  }
+  
+  .mode-btn.active.open {
+    background: #2b9348;
+    color: white;
+  }
+  
+  .mode-btn.active.closed {
+    background: #c44520;
+    color: white;
+  }
+  
+  .mode-hint {
+    font-size: 26rpx;
+    background: #f0f2f5;
+    padding: 0 24rpx;
+    border-radius: 60rpx;
+    display: flex;
+    align-items: center;
+    color: #5a6e85;
+    font-weight: 500;
+  }
+  
+  /* 日历滚动区 */
+  .calendar-scroll {
+    height: calc(100vh - 380rpx);
+    width: 100%;
+  }
+  
+  .weeks-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24rpx;
+    padding: 12rpx 12rpx 30rpx;
+  }
+  
+  .week-row {
+    background: white;
+    border-radius: 32rpx;
+    padding: 20rpx 16rpx;
+    box-shadow: 0 4rpx 16rpx rgba(0,0,0,0.06);
+  }
+  
+  .week-label {
+    font-size: 26rpx;
+    font-weight: 600;
+    color: #3b82f6;
+    background: #eef2ff;
+    display: inline-block;
+    padding: 6rpx 20rpx;
+    border-radius: 50rpx;
+    margin-bottom: 20rpx;
+  }
+  
+  .week-days {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16rpx;
+    justify-content: flex-start;
+  }
+  
+  .day-card {
+    flex: 0 0 calc(12% - 10rpx);
+    min-width: 110rpx;
+    border-radius: 24rpx;
+    padding: 18rpx 8rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.1s ease;
+  }
+  
+  /* 开放状态 - 绿色 */
+  .day-open {
+    background: #4caf50;
+    border: 2rpx solid #388e3c;
+  }
+  
+  .day-open .day-month {
+    color: #ffffff;
+  }
+  
+  .day-open .day-number {
+    color: #ffffff;
+  }
+  
+  .day-open .day-status {
+    color: #ffffff;
+    background: rgba(255,255,255,0.25);
+  }
+  
+  /* 闭馆状态 - 红色 */
+  .day-closed {
+    background: #f44336;
+    border: 2rpx solid #d32f2f;
+  }
+  
+  .day-closed .day-month {
+    color: #ffffff;
+  }
+  
+  .day-closed .day-number {
+    color: #ffffff;
+  }
+  
+  .day-closed .day-status {
+    color: #ffffff;
+    background: rgba(255,255,255,0.25);
+  }
+  
+  .day-month {
+    font-size: 22rpx;
+    margin-bottom: 12rpx;
+    font-weight: 500;
+  }
+  
+  .day-number {
+    font-size: 42rpx;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 10rpx;
+  }
+  
+  .day-status {
+    font-size: 22rpx;
+    padding: 4rpx 14rpx;
+    border-radius: 30rpx;
+    margin-top: 8rpx;
+    font-weight: 500;
+  }
+  
+  /* 底部按钮 */
+  .footer {
+    margin-top: 30rpx;
+    padding: 20rpx;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .debug-btn {
+    background: #eef2ff;
+    color: #3b82f6;
+    font-size: 26rpx;
+    border-radius: 60rpx;
+    width: auto;
+    padding: 0 30rpx;
+    height: 70rpx;
+    line-height: 70rpx;
+  }
+  
+  /* 响应式适配 */
+  @media (max-width: 750rpx) {
+    .day-card {
+      flex: 0 0 calc(20% - 16rpx);
+      min-width: 100rpx;
+    }
+    
+    .day-number {
+      font-size: 36rpx;
+    }
+    
+    .mode-buttons {
+      flex-wrap: wrap;
+    }
+  }
